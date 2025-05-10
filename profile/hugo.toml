@@ -1,0 +1,41 @@
+baseURL = "https://yourcompany.com"
+languageCode = "en-us"
+title = "Your Company Name"
+theme = "profile"
+
+[params]
+  description = "Your comprehensive company description"
+  tagline = "Your catchy tagline that highlights your unique value proposition"
+  email = "contact@yourcompany.com"
+  phone = "+1 (555) 123-4567"
+  address = "123 Business Avenue, Your City, Country"
+  
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Mission"
+    url = "/#mission"
+    weight = 2
+  [[menu.main]]
+    name = "Vision"
+    url = "/#vision"
+    weight = 3
+  [[menu.main]]
+    name = "Projects"
+    url = "/#projects"
+    weight = 4
+  [[menu.main]]
+    name = "Labs & Brands"
+    url = "/#labs"
+    weight = 5
+  [[menu.main]]
+    name = "Gigs"
+    url = "/#gigs"
+    weight = 6
+  [[menu.main]]
+    name = "Contact"
+    url = "/#contact"
+    weight = 7
