@@ -82,6 +82,48 @@ p {
   font-size: 0.9rem;
 }
 
+/* Banners on top */
+.banners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  gap: 10px;
+}
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  width: fit-content;
+  max-width: 90%;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  background-color: #e0f7fa; /* Default light background */
+}
+.praise-allah {
+  background-color: #d0f0c0; /* Light green */
+}
+.solidarity-palestine {
+  background-color: #ffe0e0; /* Light soft red */
+}
+.pray-allah {
+  background-color: #e0e7ff; /* Light soft blue */
+}
+.banner-icon {
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+@media (max-width: 600px) {
+  .banner {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
 /* Header Styles */
 .site-header {
   position: fixed;
@@ -143,6 +185,12 @@ p {
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   position: relative;
   overflow: hidden;
+}
+
+.hero-sub-sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content {
@@ -424,12 +472,25 @@ p {
 
 /* Animation Classes */
 .animate-in {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(30px);
+  animation: Opaque 2s ease-in;
+}
+
+@keyframes Opaque {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .site-header {
+    position: relative
+  }
+
+  .site-header .container {
+    display: none;
+  }
   .main-nav {
     display: none;
   }

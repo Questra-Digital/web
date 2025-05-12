@@ -1,14 +1,14 @@
-baseURL = "https://yourcompany.com"
+baseURL = "https://questra.digital"
 languageCode = "en-us"
-title = "Your Company Name"
+title = "Questra Digital"
 theme = "profile"
 
 [params]
-  description = "Your comprehensive company description"
-  tagline = "Your catchy tagline that highlights your unique value proposition"
-  email = "contact@yourcompany.com"
-  phone = "+1 (555) 123-4567"
-  address = "123 Business Avenue, Your City, Country"
+  description = ""
+  tagline = "Transforming digitization through open-source, collaborative and self-sustained models"
+  email = "jawad@questra.digital"
+  phone = "+92 321 4189015"
+  address = ""
   
 [menu]
   [[menu.main]]
