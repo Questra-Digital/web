@@ -261,15 +261,68 @@ p {
 }
 
 /* Mission Section */
+
 .mission-section {
-  background-color: white;
+  padding: 60px 20px;
+  background-color: #fff;
 }
 
-.mission-content {
-  max-width: 800px;
-  margin: 0 auto;
+.content-wrapper {
+  max-width: 1200px;
+  margin: auto;
   text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.problems-solutions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  text-align: left;
+}
+
+.problems, .solutions {
+  background: #f0f4f8;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.problems h3, .solutions h3 {
+  font-size: 1.8rem;
+  color: #0056b3;
+  margin-bottom: 20px;
+}
+
+.problems ul, .solutions ul {
+  list-style-type: none;
+}
+
+.problems li, .solutions li {
+  margin-bottom: 20px;
+}
+
+.problems h4, .solutions h4 {
   font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.problems p, .solutions p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .problems-solutions {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Vision Cards */
