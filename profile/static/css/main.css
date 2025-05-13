@@ -295,7 +295,7 @@ p {
 
 .problems h3, .solutions h3 {
   font-size: 1.8rem;
-  color: #0056b3;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
@@ -397,72 +397,59 @@ p {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Hexagonal Projects */
-.hexagon-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  margin-top: 30px;
+/* Projects */
+
+.project-section {
+  padding: 60px 20px;
 }
 
-.hexagon {
-  width: 300px;
-  height: 350px;
-  position: relative;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--transition);
-  cursor: pointer;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-.hexagon:hover {
-  transform: translateY(-10px);
-}
-
-.hexagon-content {
-  width: 90%;
-  height: 90%;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background-color: white;
+.project-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 8px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
 }
 
-.hexagon-content h3 {
+.project-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.project-title {
+  font-size: 1.2rem;
   color: var(--primary-color);
-  margin-bottom: 15px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-.project-items {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
+.project-description {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.75rem;
 }
 
-.hexagon:hover .project-items {
-  max-height: 500px;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
-.project-item {
-  margin-bottom: 10px;
-}
-
-.project-item h4 {
-  font-size: 1rem;
-  margin-bottom: 5px;
-}
-
-.project-item p {
-  font-size: 0.9rem;
-  margin-bottom: 0;
+.tag {
+  background: var(--light-color);
+  color: var(--secondary-color);
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  white-space: nowrap;
 }
 
 /* Cards Grid */
@@ -571,7 +558,7 @@ p {
     position: relative
   }
 
-  .site-header .container {
+  .site-header .logo, .site-header .main-nav {
     display: none;
   }
 
