@@ -1,51 +1,55 @@
 window.addEventListener('load', () => {
-  const track = document.getElementById('ticker');
-  const container = track.parentElement;
+  const tracks = document.getElementsByClassName('ticker');
+  [...tracks].forEach((track, index) => {
+    const container = track.parentElement;
 
-  // Remove previous animation (in case of reload or resize)
-  track.style.animation = 'none';
+    // Remove previous animation (in case of reload or resize)
+    track.style.animation = 'none';
 
-  const trackOriginalWidth = track.scrollWidth;
-  const containerWidth = container.offsetWidth;
+    const trackOriginalWidth = track.scrollWidth;
+    const containerWidth = container.offsetWidth;
 
-  // If content is smaller than container, DO NOT animate
-  if (trackOriginalWidth <= containerWidth) {
-    track.style.transform = 'translateX(0)';
-    return;
-  }
-
-  // Clone items to make seamless loop
-  track.innerHTML += track.innerHTML;
-  
-  const trackFullWidth = track.scrollWidth;
-
-  // Set the speed: how many pixels per second
-  const speedPerPixel = 50; // Adjust speed here
-  const animationDuration = trackFullWidth / speedPerPixel;
-
-  // Set animation properties dynamically
-  track.style.animation = `scrollTicker ${animationDuration}s linear infinite`;
-
-  // Inject dynamic keyframes
-  const styleSheet = document.createElement("style");
-  styleSheet.innerHTML = `
-    @keyframes scrollTicker {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-${trackFullWidth / 2}px); }
+    // If content is smaller than container, DO NOT animate
+    if (trackOriginalWidth <= containerWidth) {
+      track.style.transform = 'translateX(0)';
+      return;
     }
-  `;
-  document.head.appendChild(styleSheet);
 
-  // (Optional) Touch support for mobile devices
-  let startX = 0;
-  container.addEventListener('touchstart', (e) => {
-    track.style.animationPlayState = 'paused';
-    startX = e.touches[0].clientX;
-  });
+    // Clone items to make seamless loop
+    // track.innerHTML += track.innerHTML;
+    
+    const trackFullWidth = track.scrollWidth;
 
-  container.addEventListener('touchend', (e) => {
-    track.style.animationPlayState = 'running';
+    // Set the speed: how many pixels per second
+    const speedPerPixel = 50; // Adjust speed here
+    const animationDuration = trackFullWidth / speedPerPixel;
+
+    // Set animation properties dynamically
+    track.style.animation = `scrollTicker${index} ${animationDuration}s linear infinite`;
+
+    // Inject dynamic keyframes
+    const styleSheet = document.createElement("style");
+    styleSheet.innerHTML = `
+      @keyframes scrollTicker${index} {
+        0% { transform: translateX(${trackFullWidth }px); }
+        100% { transform: translateX(-${trackFullWidth }px); }
+      }
+    `;
+    document.head.appendChild(styleSheet);
+
+    // (Optional) Touch support for mobile devices
+    let startX = 0;
+    container.addEventListener('touchstart', (e) => {
+      track.style.animationPlayState = 'paused';
+      startX = e.touches[0].clientX;
+    });
+
+    container.addEventListener('touchend', (e) => {
+      track.style.animationPlayState = 'running';
+    });
+
   });
+  
 });
 
 
@@ -220,3 +224,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+});

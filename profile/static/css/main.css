@@ -91,11 +91,9 @@ p {
   gap: 10px;
 }
 .banner {
-  display: flex;
   align-items: center;
   justify-content: center;
   min-width: 280px;
-  width: fit-content;
   max-width: 90%;
   padding: 10px 20px;
   border-radius: 30px;
@@ -103,20 +101,46 @@ p {
   font-weight: 500;
   color: #333;
   background-color: #e0f7fa; /* Default light background */
+  overflow: hidden;
+  box-sizing: content-box;
+  white-space: nowrap;
+  position: relative;
 }
 .praise-allah {
   background-color: #d0f0c0; /* Light green */
+  width: 100%;
+  text-align: center;
 }
 .solidarity-palestine {
+  width: 100%;
   background-color: #ffe0e0; /* Light soft red */
 }
-.pray-allah {
-  background-color: #e0e7ff; /* Light soft blue */
+
+/* Ticker Track */
+
+.ticker span {
+  padding: 2px;
+  font-size: 1.2rem;
 }
-.banner-icon {
-  font-size: 1.4rem;
-  margin-right: 10px;
+
+/* Pause on hover */
+.banner:hover .ticker {
+  animation-play-state: paused;
 }
+
+.ticker {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  will-change: transform;
+  white-space: nowrap;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform: translateX(100%);
+}
+
 @media (max-width: 600px) {
   .banner {
     font-size: 1rem;
@@ -194,7 +218,7 @@ p {
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 80%;
 }
 
 .hero-content h1 {
