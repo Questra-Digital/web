@@ -1,13 +1,13 @@
 <!-- Hero Section -->
 <section id="hero" class="hero-section" data-scroll-section>
-  <div class="container hero-sub-sec">
+  <div class="container">
     <div class="hero-content">
-      <h1 class="animate-in">Welcome to <span>Questra Digital</span></h1>
-      <p class="animate-in">Building a community for digital innovators to tranform local digitization through open-source, collaborative and self-sustained models</p>
+      <h1 class="animate-in">A Community for <span>Digital Innovators</span></h1>
+      <p class="animate-in">Towards self-reliant digital communities through open-source, collaborative and self-sustained models</p>
       <!-- <a href="#contact" class="btn animate-in">Get in Touch</a>er -->
     </div>
-    <!-- <div class="hero-image animate-in"> -->
-      <!-- Image or animation here -->
-    <!-- </div> -->
+    <div class="hero-image animate-in">
+      {{ readFile "static/images/hero_image.svg" | safeHTML }}
+    </div>
   </div>
 </section>
