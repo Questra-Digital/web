@@ -1,0 +1,34 @@
+<section class="listing-header">
+  <h1>Products</h1>
+  <input type="text" id="search" class="styled-search" placeholder="🔍 Search Products..." />
+
+  {{ $json := resources.Get "data/product/filter.json" }}
+  {{ $filters := $json | transform.Unmarshal }}
+
+  <div class="tag-filters">
+    {{ range $index, $tag := $filters }}
+      <button class="filter-tag {{ if eq $tag "All" }}active{{ end }}" data-filter="{{ $tag }}">{{ $tag }}</button>
+    {{ end }}
+  </div>
+</section>
+
+
+  <!-- Cards -->
+  
+<section class="listing-cards">
+  {{ $json := resources.Get "data/product/product.json" }}
+  {{ $cards := $json | transform.Unmarshal }}
+
+  {{ range $index, $card := $cards }}
+    <div class="modern-card" data-title="{{ $card.title | lower }}">
+      <h3 class="card-title">{{ $card.title }}</h3>
+      <p class="card-desc">{{ $card.desc }}</p>
+      <p class="card-track">{{ $card.track }}</p>
+      <div class="card-tags">
+        {{ range $card.tags }}
+          <span class="tag-pill">{{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</section>

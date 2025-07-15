@@ -1,0 +1,14 @@
+[
+  {
+    "title": "AMAGI - Vultr AI",
+    "desc": "Amagi is a proactive AI assistant that sees your...",
+    "track": "The Monad (AI-Smith Protocol) - Vultr Track",
+    "tags": ["Groq", "Llama 4", "Whisper", "Qdrant"]
+  },
+  {
+    "title": "AI Agent-Market",
+    "desc": "An AI-powered shopping assistant built with FastAPI,...",
+    "track": "Hackcelerate - Prosus Track",
+    "tags": ["Groq", "Llama 3"]
+  }
+]
