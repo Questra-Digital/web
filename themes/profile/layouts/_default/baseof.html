@@ -14,21 +14,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    {{ partial "./sections/tickers/ticker.html"}}
-    <div class="container">
-      <a href="/" class="logo">Questra Digital</a>
-      <nav class="main-nav">
-        <ul>
-          {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
-      </nav>
-      <!-- <button class="menu-toggle">Menu</button> -->
-    </div>
-  </header>
-
+  
+{{ partial "sections/header/header.html" . }}
   <main data-scroll-container>
     {{ block "main" . }}{{ end }}
   </main>

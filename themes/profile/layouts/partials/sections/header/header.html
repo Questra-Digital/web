@@ -1,0 +1,70 @@
+<header class="site-header">
+    {{ partial "./sections/tickers/ticker.html"}}
+    <div class="container">
+      <a href="/" class="logo">Questra Digital</a>
+    <nav class="main-nav">
+  <ul>
+    {{ range .Site.Menus.main }}
+      {{ if eq .Identifier "list" }}
+      <li class="dropdown">
+        <a href="#">Pages</a>
+        <div class="mega-menu">
+          
+          {{ $products := (resources.Get "data/product/product.json" | transform.Unmarshal) }}
+          {{ $freelancers := (resources.Get "data/freelancer/freelancer.json" | transform.Unmarshal) }}
+          {{ $courses := (resources.Get "data/course/course.json" | transform.Unmarshal) }}
+          {{ $solutions := (resources.Get "data/solution/solution.json" | transform.Unmarshal) }}
+
+          <!-- Product Section -->
+          <div class="menu-column">
+            <h4><a href="/product">Product</a></h4>
+            <ul>
+              {{ range $products }}
+              <li><a href="#">{{.title}}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+
+          <!-- Freelancer Section -->
+          <div class="menu-column">
+            <h4><a href="/freelancer">Freelancer</a></h4>
+            <ul>
+              {{ range $freelancers }}
+              <li><a href="#">{{ .title }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+
+          <!-- Course Section -->
+          <div class="menu-column">
+            <h4><a href="/course">Course</a></h4>
+            <ul>
+              {{ range $courses }}
+              <li><a href="#">{{ .title }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+
+          <!-- Solution Section -->
+          <div class="menu-column">
+            <h4><a href="/solution">Solution</a></h4>
+            <ul>
+              {{ range $solutions }}
+              <li><a href="#">{{ .title }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+
+        </div>
+      </li>
+      {{ else }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</nav>
+
+
+      <!-- <button class="menu-toggle">Menu</button> -->
+    </div>
+  </header>

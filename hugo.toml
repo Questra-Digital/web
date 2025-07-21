@@ -18,7 +18,7 @@ theme = "profile"
   [[menu.main]]
     name = "Mission"
     url = "/#mission"
-    weight = 2
+    weight = 8
   [[menu.main]]
     name = "Vision"
     url = "/#vision"
@@ -40,22 +40,9 @@ theme = "profile"
     url = "/#contact"
     weight = 7
 
-[[menu.main]]
-name = "Product"
-url = "/product/"
-weight = 8
 
 [[menu.main]]
-name = "Solution"
-url = "/solution/"
-weight = 9
-
-[[menu.main]]
-name = "Course"
-url = "/course/"
-weight = 10
-
-[[menu.main]]
-name = "Freelancer"
-url = "/freelancer/"
-weight = 11
+name = "Pages"
+url = "#"
+identifier = "list"
+weight = 2

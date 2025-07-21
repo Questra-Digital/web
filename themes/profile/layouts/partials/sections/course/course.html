@@ -2,12 +2,22 @@
   <h1>Courses</h1>
   <input type="text" id="search" class="styled-search" placeholder="🔍 Search Courses..." />
 
-  {{ $json := resources.Get "data/course/filter.json" }}
-  {{ $filters := $json | transform.Unmarshal }}
+  {{ $json := resources.Get "data/course/course.json" }}
+  {{ $cards := $json | transform.Unmarshal }}
+
+  {{/* Collect all tags and deduplicate */}}
+  {{ $allTags := slice }}
+  {{ range $cards }}
+    {{ range .tags }}
+      {{ $allTags = $allTags | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $uniqueTags := $allTags | uniq | sort }}
 
   <div class="tag-filters">
-    {{ range $index, $tag := $filters }}
-      <button class="filter-tag {{ if eq $tag "All" }}active{{ end }}" data-filter="{{ $tag }}">{{ $tag }}</button>
+    <button class="filter-tag active" data-filter="All">All</button>
+    {{ range $uniqueTags }}
+      <button class="filter-tag" data-filter="{{ . }}">{{ . }}</button>
     {{ end }}
   </div>
 </section>
@@ -19,16 +29,21 @@
   {{ $json := resources.Get "data/course/course.json" }}
   {{ $cards := $json | transform.Unmarshal }}
 
-  {{ range $index, $card := $cards }}
-    <div class="modern-card" data-title="{{ $card.title | lower }}">
-      <h3 class="card-title">{{ $card.title }}</h3>
-      <p class="card-desc">{{ $card.desc }}</p>
-      <p class="card-track">{{ $card.track }}</p>
-      <div class="card-tags">
-        {{ range $card.tags }}
-          <span class="tag-pill">{{ . }}</span>
-        {{ end }}
-      </div>
+ {{ range $index, $card := $cards }}
+  <a href="/course-details.html?id={{ urlize $card.title }}" class="aaa">
+   <div class="modern-card" data-title="{{ $card.title | lower }}">
+  
+    <h3 class="card-title">{{ $card.title }}</h3>
+    <p class="card-desc">{{ $card.desc }}</p>
+    <p class="card-track">{{ $card.track }}</p>
+    <div class="card-tags">
+      {{ range $card.tags }}
+        <span class="tag-pill">{{ . }}</span>
+      {{ end }}
     </div>
+  </a>
+</div>
   {{ end }}
 </section>
+
+

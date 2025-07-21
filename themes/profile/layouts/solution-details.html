@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+    <!-- In <head> -->
+<link rel="stylesheet" href="/css/detailedproduct.css" />
+<link rel="stylesheet" href="/css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+{{ partial "sections/header/header.html" . }}
+
+    <div class="detail-card">
+        <div id="product-detail">
+            <h1>Loading...</h1>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+
+        fetch("/data/solution/detailedsolution.json")
+            .then(res => res.json())
+            .then(data => {
+                const product = data.find(p => p.slug === id);
+                if (!product) {
+                    document.getElementById("product-detail").innerHTML = "<h1>Product not found</h1>";
+                    return;
+                }
+
+                document.getElementById("product-detail").innerHTML = `
+                    <h1>${product.title}</h1>
+                    <video class="detail-video" controls src="${product.video}"></video>
+                    <p><strong>Description:</strong> ${product.description}</p>
+                    <p><strong>Contributors:</strong></p>
+                    <div class="contributors-grid">
+                        ${product.contributors.map(c => `
+                            <div class="contributor-card">
+                                <img src="${c.avatar}" alt="${c.name}">
+                                <div class="contributor-info">
+                                    <strong>${c.name}</strong>
+                                    <span>${c.role}</span>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+
+                // Render Pricing Section
+                if (product.pricing_plans && product.pricing_plans.length > 0) {
+                    const pricingSection = document.createElement('section');
+                    pricingSection.className = 'pricing-section';
+                    pricingSection.innerHTML = `
+                        <h2>Our Pricing</h2>
+                        <div class="pricing-grid">
+                            ${product.pricing_plans.map(plan => `
+                                <div class="pricing-card ${plan.name.toLowerCase()}">
+                                    <div class="pricing-header">
+                                        <h3>${plan.name}</h3>
+                                        <p>${plan.description}</p>
+                                        ${plan.tag ? `<span class="pricing-tag">${plan.tag}</span>` : ''}
+                                    </div>
+                                    <div class="price-display">
+                                        ${plan.price === 'Contact us' ?
+                                            `<span class="amount">${plan.price}</span>` :
+                                            `
+                                            <span class="currency">${plan.currency}</span>
+                                            <span class="amount">${plan.price}</span>
+                                            <span class="period">${plan.period}</span>
+                                            ${plan.note ? `<span class="note">${plan.note}</span>` : ''}
+                                            `
+                                        }
+                                    </div>
+                                           ${plan.extraInfoTitle ? `<div class="enterprise-contact-info"><h4>${plan.extraInfoTitle}</h4></div>` : ''}
+                                    ${plan.benefits && plan.benefits.length > 0 ? `
+                                        <ul class="benefits-list">
+                                            ${plan.benefits.map(benefit => `<li>${benefit}</li>`).join('')}
+                                        </ul>
+                                    ` : ''}
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                    document.body.appendChild(pricingSection);
+                }
+            });
+    </script>
+    <script src="/js/main.js/"></script>
+</body>
+</html>

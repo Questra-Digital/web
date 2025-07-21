@@ -1,14 +1,20 @@
 [
   {
-    "title": "AMAGI - Vultr AI",
-    "desc": "Amagi is a proactive AI assistant that sees your...",
-    "track": "The Monad (AI-Smith Protocol) - Vultr Track",
-    "tags": ["Groq", "Llama 4", "Whisper", "Qdrant"]
+    "title": "NeuraMind Studio",
+    "desc": "A no-code AI platform to create intelligent agents.",
+    "track": "Neural Hack - Open Track",
+    "tags": ["ChatGPT", "No-Code", "TTS", "AI"]
   },
   {
-    "title": "AI Agent-Market",
-    "desc": "An AI-powered shopping assistant built with FastAPI,...",
-    "track": "Hackcelerate - Prosus Track",
-    "tags": ["Groq", "Llama 3"]
+    "title": "QuantumFlow Engine",
+    "desc": "High-performance simulator for quantum computing circuits.",
+    "track": "Future Tech - IBM Quantum Track",
+    "tags": ["Qiskit", "Rust", "Quantum", "IBM"]
+  },
+  {
+    "title": "VisionaryLens",
+    "desc": "AI-powered photo enhancer for low-resolution images.",
+    "track": "SnapHack - Imaging Track",
+    "tags": ["OpenCV", "Stable Diffusion", "AI", "Photo"]
   }
 ]

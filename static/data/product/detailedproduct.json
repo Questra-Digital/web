@@ -1,0 +1,214 @@
+[
+  {
+    "slug": "neuramind-studio",
+    "title": "NeuraMind Studio",
+    "video": "https://www.youtube.com/results?search_query=how+to+download+hugo+.mp4",
+    "description": "NeuraMind is a drag-and-drop platform to build AI agents without writing code.",
+    "contributors": [
+      {
+        "name": "Jhonnatan Betancourt",
+        "role": "Data Analytics",
+        "avatar": "https://randomuser.me/api/portraits/men/75.jpg"
+      },
+      {
+        "name": "Garance Colomer",
+        "role": "Machine Learning Engineer",
+        "avatar": "https://randomuser.me/api/portraits/women/75.jpg"
+      },
+      {
+        "name": "Jhonnatan Betancourt",
+        "role": "Data Analytics",
+        "avatar": "https://randomuser.me/api/portraits/men/75.jpg"
+      },
+      {
+        "name": "Garance Colomer",
+        "role": "Machine Learning Engineer",
+        "avatar": "https://randomuser.me/api/portraits/women/75.jpg"
+      }
+    ],
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "tag": "Free forever",
+        "description": "Perfect for personal projects, exploring new ideas, and early-stage startups. No charges ever.",
+        "price": "0",
+        "currency": "$",
+        "period": "",
+        "note": "Always",
+        "buttonText": "Get started",
+        "buttonLink": "#",
+        "buttonClass": "primary",
+        "benefits": [
+          "All Grafana Cloud services, limited to the included usage",
+          "Community support",
+          "All Enterprise plugins for 3 users",
+          "14-day retention for Metrics, Logs"
+        ]
+      },
+      {
+        "name": "Pro",
+        "tag": "Monthly",
+        "description": "Ready for scaling with more retention, basic support, and usage-based pricing.",
+        "price": "19",
+        "currency": "$",
+        "period": "/month",
+        "note": "From",
+        "buttonText": "Get started",
+        "buttonLink": "#",
+        "buttonClass": "primary",
+        "benefits": [
+          "All Grafana Cloud services, with the same usage included in Free, and clear pricing above that*",
+          "8 × 5 email support",
+          "Access to Enterprise plugins at additional cost"
+        ]
+      },
+      {
+        "name": "Advanced",
+        "tag": "Monthly",
+        "description": "Ideal for scaling or critical use cases with 24 × 7 support and Enterprise plugins included.",
+        "price": "299",
+        "currency": "$",
+        "period": "/month",
+        "note": "From",
+        "buttonText": "Get started",
+        "buttonLink": "#",
+        "buttonClass": "primary",
+        "benefits": [
+          "All Grafana Cloud services, with 2x the usage included and clear pricing above that*",
+          "24 × 7 email support",
+          "All Enterprise plugins for 5 users",
+          "($55 per additional active user)"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "tag": "Contract",
+        "description": "A full-service offering for companies with security, compliance, and deployment requirements.",
+        "price": "Contact us",
+        "currency": "",
+        "period": "",
+        "note": "Custom",
+        "buttonText": "Contact us",
+        "buttonLink": "#",
+        "buttonClass": "contact",
+        "extraInfoTitle": "Let's talk if you're thinking about:",
+        "benefits": [
+          "A dedicated environment on Grafana Cloud",
+          "Grafana Cloud in new regions/AZs",
+          "FedRAMP",
+          "Bring Your Own Cloud (your AWS/GCP account)"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "quantumflow-engine",
+    "title": "QuantumFlow Engine",
+    "video": "https://example.com/videos/quantumflow.mp4",
+    "description": "QuantumFlow allows developers to simulate quantum algorithms at scale.",
+    "contributors": [
+      {
+        "name": "Marie Curie",
+        "role": "Quantum Physicist",
+        "avatar": "https://randomuser.me/api/portraits/women/66.jpg"
+      },
+      {
+        "name": "Max Planck",
+        "role": "Scientific Advisor",
+        "avatar": "https://randomuser.me/api/portraits/men/66.jpg"
+      }
+    ],
+    "pricing_plans": [
+      {
+        "name": "Free Trial",
+        "tag": "Limited Time",
+        "description": "Experience basic QuantumFlow features.",
+        "price": "0",
+        "currency": "$",
+        "period": "",
+        "note": "For 30 days",
+        "buttonText": "Start Free Trial",
+        "buttonLink": "#",
+        "buttonClass": "primary",
+        "benefits": [
+          "Access to basic quantum simulators",
+          "Community forum support",
+          "Limited project storage"
+        ]
+      },
+      {
+        "name": "Developer",
+        "tag": "Monthly",
+        "description": "For individual developers and small teams.",
+        "price": "49",
+        "currency": "$",
+        "period": "/month",
+        "note": "Ideal for projects",
+        "buttonText": "Subscribe Now",
+        "buttonLink": "#",
+        "buttonClass": "primary",
+        "benefits": [
+          "Full access to quantum simulators",
+          "Email support (5x8)",
+          "100 GB project storage",
+          "Access to advanced algorithms"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "visionarylens",
+    "title": "VisionaryLens",
+    "video": "https://example.com/videos/visionarylens.mp4",
+    "description": "Enhance blurry images using state-of-the-art generative AI models.",
+    "contributors": [
+      {
+        "name": "Emily Davis",
+        "role": "AI Vision Engineer",
+        "avatar": "https://randomuser.me/api/portraits/women/60.jpg"
+      },
+      {
+        "name": "Carlos Rivera",
+        "role": "Image Specialist",
+        "avatar": "https://randomuser.me/api/portraits/men/60.jpg"
+      }
+    ],
+    "pricing_plans": [
+      {
+        "name": "Basic",
+        "tag": "Monthly",
+        "description": "Perfect for personal use and small batch enhancements.",
+        "price": "9",
+        "currency": "$",
+        "period": "/month",
+        "note": "Up to 50 images/month",
+        "buttonText": "Get Started",
+        "buttonLink": "#",
+        "buttonClass": "primary",
+        "benefits": [
+          "Standard image enhancement",
+          "Community support",
+          "Access to basic filters"
+        ]
+      },
+      {
+        "name": "Pro",
+        "tag": "Monthly",
+        "description": "For professionals needing higher volume and advanced features.",
+        "price": "39",
+        "currency": "$",
+        "period": "/month",
+        "note": "Up to 500 images/month",
+        "buttonText": "Upgrade Now",
+        "buttonLink": "#",
+        "buttonClass": "primary",
+        "benefits": [
+          "High-resolution enhancement",
+          "Email support",
+          "Access to all filters and models",
+          "Batch processing"
+        ]
+      }
+    ]
+  }
+]
