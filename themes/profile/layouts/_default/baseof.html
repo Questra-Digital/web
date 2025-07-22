@@ -20,11 +20,7 @@
     {{ block "main" . }}{{ end }}
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
-    </div>
-  </footer>
+  {{ partial "sections/footer/footer.html" . }}
 
   <script src="/js/main.js"></script>
 </body>
