@@ -1,0 +1,20 @@
+[
+  {
+    "title": "NeuraMind Studio",
+    "desc": "A no-code AI platform to create intelligent agents.",
+    "track": "Neural Hack - Open Track",
+    "tags": ["ChatGPT", "No-Code", "TTS", "AI"]
+  },
+  {
+    "title": "QuantumFlow Engine",
+    "desc": "High-performance simulator for quantum computing circuits.",
+    "track": "Future Tech - IBM Quantum Track",
+    "tags": ["Qiskit", "Rust", "Quantum", "IBM"]
+  },
+  {
+    "title": "VisionaryLens",
+    "desc": "AI-powered photo enhancer for low-resolution images.",
+    "track": "SnapHack - Imaging Track",
+    "tags": ["OpenCV", "Stable Diffusion", "AI", "Photo"]
+  }
+]
