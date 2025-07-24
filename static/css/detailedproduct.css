@@ -161,7 +161,7 @@ ul {
     .contributor-card {
         width: 100%;
     }
-
+   
     .pricing-grid {
         grid-template-columns: 1fr;
     }
@@ -185,7 +185,7 @@ ul {
     .detail-card {
         padding: 15px;
     }
-
+    
     #product-detail h1 {
         font-size: 1.6rem;
     }

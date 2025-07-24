@@ -100,14 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Mobile Menu Toggle
-  const menuToggle = document.querySelector('.menu-toggle');
-  const mainNav = document.querySelector('.main-nav');
-  if (menuToggle && mainNav) {
-    menuToggle.addEventListener('click', () => {
-      mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
-    });
-  }
 
   // Contact Form Submission Animation
   const contactForm = document.getElementById('contactForm');
@@ -269,4 +261,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
  
+//hamburger menu
 
+  const btn = document.getElementById('hamburger-btn');
+  const nav = document.getElementById('main-nav');
+
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
