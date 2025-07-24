@@ -3,18 +3,27 @@
 <head>
     <title>Product Details</title>
     <!-- In <head> -->
-<link rel="stylesheet" href="/css/detailedproduct.css" />
-<link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/detailedproduct.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-{{ partial "sections/header/header.html" . }}
+    {{ partial "sections/header/header.html" . }}
 
-    <div class="detail-card">
-        <div id="product-detail">
-            <h1>Loading...</h1>
+    <!-- Main content container for all dynamically loaded content -->
+    <div id="dynamic-content-container">
+        <div class="detail-card">
+            <div id="product-detail">
+                <h1>Loading...</h1>
+            </div>
         </div>
+        
+        <!-- Placeholder for pricing section -->
+        <div id="pricing-section-placeholder"></div>
     </div>
+
+    {{ partial "sections/footer/footer.html" . }}
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -29,6 +38,7 @@
                     return;
                 }
 
+                // Render product details
                 document.getElementById("product-detail").innerHTML = `
                     <h1>${product.title}</h1>
                     <video class="detail-video" controls src="${product.video}"></video>
@@ -45,9 +55,30 @@
                             </div>
                         `).join('')}
                     </div>
+
+                    <h2>Overview</h2>
+                    <p>${product.paragraph1}</p>
+                    <p>${product.paragraph2}</p>
+
+                    <h2>Key Features</h2>
+                    <ul>
+                        ${product.features.map(f => `<li>${f}</li>`).join('')}
+                    </ul>
+
+                    <h2>Specifications</h2>
+                    <table border="1" class="spec-table">
+                        <thead>
+                            <tr><th>Attribute</th><th>Value</th></tr>
+                        </thead>
+                        <tbody>
+                            ${product.specs.map(spec => `
+                                <tr><td>${spec.name}</td><td>${spec.value}</td></tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
                 `;
 
-                // Render Pricing Section
+                // Render Pricing Section if it exists
                 if (product.pricing_plans && product.pricing_plans.length > 0) {
                     const pricingSection = document.createElement('section');
                     pricingSection.className = 'pricing-section';
@@ -72,7 +103,7 @@
                                             `
                                         }
                                     </div>
-                                           ${plan.extraInfoTitle ? `<div class="enterprise-contact-info"><h4>${plan.extraInfoTitle}</h4></div>` : ''}
+                                    ${plan.extraInfoTitle ? `<div class="enterprise-contact-info"><h4>${plan.extraInfoTitle}</h4></div>` : ''}
                                     ${plan.benefits && plan.benefits.length > 0 ? `
                                         <ul class="benefits-list">
                                             ${plan.benefits.map(benefit => `<li>${benefit}</li>`).join('')}
@@ -82,10 +113,15 @@
                             `).join('')}
                         </div>
                     `;
-                    document.body.appendChild(pricingSection);
+                    document.getElementById('pricing-section-placeholder').appendChild(pricingSection);
                 }
+            })
+            .catch(error => {
+                console.error('Error loading product:', error);
+                document.getElementById("product-detail").innerHTML = "<h1>Error loading product details</h1>";
             });
     </script>
+    
     <script src="/js/main.js/"></script>
 </body>
 </html>
