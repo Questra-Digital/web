@@ -16,11 +16,11 @@ theme = "profile"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Mission"
-    url = "/#mission"
+    name = "Our Premise"
+    url = "/#premise"
     weight = 2
   [[menu.main]]
-    name = "Vision"
+    name = "Solutions"
     url = "/#vision"
     weight = 3
   [[menu.main]]
