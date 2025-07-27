@@ -2,19 +2,22 @@
   {
     "slug": "neuramind-studio",
     "title": "NeuraMind Studio",
-    "video": "https://www.youtube.com/results?search_query=how+to+download+hugo+.mp4",
+    "video": "videos/a11.mp4",
     "description": "NeuraMind is a drag-and-drop platform to build AI agents without writing code.",
+    "paragraph1": "NeuraMind empowers users to create intelligent workflows without any coding experience through its revolutionary visual interface. The platform democratizes AI development by removing technical barriers that traditionally required data science expertise. Users can connect pre-built AI modules like puzzle pieces to create complex automation sequences. Our patented flow-based programming approach makes it easy to prototype ideas in minutes rather than weeks. Whether you're a business analyst, marketer, or entrepreneur, NeuraMind gives you the power to implement AI solutions. The system automatically handles all the underlying infrastructure and model training behind the scenes. With continuous updates, you'll always have access to the latest AI capabilities without technical maintenance.",
+    "paragraph2": "Its intuitive interface and pre-built AI blocks make it accessible to both beginners and professionals looking to accelerate their workflow automation. We've designed every component with careful attention to usability while maintaining enterprise-grade capabilities under the hood. The platform includes hundreds of pre-trained models for common business use cases like customer service, data analysis, and content generation. Advanced users can customize these building blocks or integrate their own Python scripts when needed. Real-time collaboration features allow teams to work together on AI projects simultaneously. Comprehensive documentation and interactive tutorials guide users through every capability. Our active community forum provides additional support and inspiration through shared templates and success stories.",
+    "features": [
+      "No-code workflow builder",
+      "Real-time collaboration",
+      "Pre-trained AI models",
+      "Custom integration options"
+    ],
+    "specs": [
+      { "name": "Platform", "value": "Web-based" },
+      { "name": "Language Support", "value": "English, Spanish" },
+      { "name": "Deployment", "value": "Cloud" }
+    ],
     "contributors": [
-      {
-        "name": "Jhonnatan Betancourt",
-        "role": "Data Analytics",
-        "avatar": "https://randomuser.me/api/portraits/men/75.jpg"
-      },
-      {
-        "name": "Garance Colomer",
-        "role": "Machine Learning Engineer",
-        "avatar": "https://randomuser.me/api/portraits/women/75.jpg"
-      },
       {
         "name": "Jhonnatan Betancourt",
         "role": "Data Analytics",
@@ -61,51 +64,27 @@
           "8 × 5 email support",
           "Access to Enterprise plugins at additional cost"
         ]
-      },
-      {
-        "name": "Advanced",
-        "tag": "Monthly",
-        "description": "Ideal for scaling or critical use cases with 24 × 7 support and Enterprise plugins included.",
-        "price": "299",
-        "currency": "$",
-        "period": "/month",
-        "note": "From",
-        "buttonText": "Get started",
-        "buttonLink": "#",
-        "buttonClass": "primary",
-        "benefits": [
-          "All Grafana Cloud services, with 2x the usage included and clear pricing above that*",
-          "24 × 7 email support",
-          "All Enterprise plugins for 5 users",
-          "($55 per additional active user)"
-        ]
-      },
-      {
-        "name": "Enterprise",
-        "tag": "Contract",
-        "description": "A full-service offering for companies with security, compliance, and deployment requirements.",
-        "price": "Contact us",
-        "currency": "",
-        "period": "",
-        "note": "Custom",
-        "buttonText": "Contact us",
-        "buttonLink": "#",
-        "buttonClass": "contact",
-        "extraInfoTitle": "Let's talk if you're thinking about:",
-        "benefits": [
-          "A dedicated environment on Grafana Cloud",
-          "Grafana Cloud in new regions/AZs",
-          "FedRAMP",
-          "Bring Your Own Cloud (your AWS/GCP account)"
-        ]
       }
     ]
   },
   {
     "slug": "quantumflow-engine",
     "title": "QuantumFlow Engine",
-    "video": "https://example.com/videos/quantumflow.mp4",
+    "video": "videos/a11.mp4",
     "description": "QuantumFlow allows developers to simulate quantum algorithms at scale.",
+    "paragraph1": "QuantumFlow bridges the gap between theory and practice for quantum computing by providing an accessible development environment. Our platform simulates quantum circuits with unprecedented accuracy, allowing researchers to test algorithms before running them on actual quantum hardware. The visual circuit builder helps users understand quantum gate operations through interactive visualization. Built-in error correction modeling accounts for real-world quantum noise and decoherence effects. Developers can access our library of optimized quantum algorithms for chemistry, optimization, and machine learning applications. The hybrid quantum-classical simulator enables testing of algorithms that combine conventional and quantum processing. Regular updates incorporate the latest research breakthroughs from leading quantum labs worldwide.",
+    "paragraph2": "It provides scalable infrastructure and tools for developers to experiment with quantum logic through an intuitive programming interface. Our high-performance simulator can handle circuits with up to 40 qubits on standard hardware, making it ideal for educational and research purposes. The Python SDK integrates seamlessly with popular scientific computing libraries like NumPy and SciPy. Detailed performance metrics help optimize quantum circuits for specific hardware architectures. Collaborative features allow research teams to work on quantum programs simultaneously with version control. The platform includes extensive educational resources, from beginner tutorials to advanced research papers. Our active user community shares circuit designs and optimization techniques through the built-in marketplace.",
+    "features": [
+      "Quantum circuit editor",
+      "Scalable simulations",
+      "Algorithm libraries",
+      "Community forum"
+    ],
+    "specs": [
+      { "name": "Platform", "value": "Desktop & Web" },
+      { "name": "Simulator Speed", "value": "High Performance" },
+      { "name": "Language", "value": "Python Support" }
+    ],
     "contributors": [
       {
         "name": "Marie Curie",
@@ -159,8 +138,21 @@
   {
     "slug": "visionarylens",
     "title": "VisionaryLens",
-    "video": "https://example.com/videos/visionarylens.mp4",
+    "video": "videos/a11.mp4",
     "description": "Enhance blurry images using state-of-the-art generative AI models.",
+    "paragraph1": "VisionaryLens is crafted for photographers and creators who value image clarity through our advanced AI enhancement technology. The platform uses cutting-edge generative adversarial networks trained on millions of high-quality images to reconstruct missing details. Unlike simple sharpening filters, our AI understands image content to realistically enhance faces, textures, and landscapes. Professional photographers use VisionaryLens to rescue underexposed shots or recover details from motion-blurred images. The technology preserves natural textures while removing compression artifacts and noise from low-light conditions. Batch processing capabilities allow studios to enhance entire photo shoots with consistent quality. Regular model updates incorporate the latest breakthroughs in computer vision research.",
+    "paragraph2": "Using AI and deep learning, it brings out details even in poorly lit or blurred images through multi-stage neural network processing. Our proprietary architecture combines the strengths of super-resolution, denoising, and deblurring models for optimal results. The system analyzes each image region to apply context-appropriate enhancements—sharpening text differently than facial features, for example. Photographers can fine-tune results using intuitive sliders for detail, noise reduction, and color correction. The mobile app version brings these powerful tools to on-the-go editing with cloud processing. Enterprise clients benefit from custom model training to optimize for specific use cases like medical imaging or satellite photos. All processing happens on secure servers with optional local processing for sensitive content.",
+    "features": [
+      "AI image upscaling",
+      "Noise reduction",
+      "Batch processing",
+      "Cloud storage"
+    ],
+    "specs": [
+      { "name": "Resolution Support", "value": "Up to 8K" },
+      { "name": "File Types", "value": "JPG, PNG, TIFF" },
+      { "name": "Platform", "value": "Web & Mobile App" }
+    ],
     "contributors": [
       {
         "name": "Emily Davis",
